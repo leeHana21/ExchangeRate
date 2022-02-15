@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">exchangeRateProject</string>
+    <string name="title">환율 계산</string>
+    <string name="remittance_country">송금국가 : </string>
+    <string name="explain_america">미국(USD)</string>
+    <string name="receipt_country">수취국가 : </string>
+    <string name="exchange_usd">USD</string>
+    <string name="remittance">송금액 : </string>
+    <string name="exchange_rate">환율 : </string>
+    <string name="view_time">조회시간 : </string>
+    <string name="receipt_kr">한국\n(KRW)</string>
+    <string name="receipt_jp">일본\n(JPY)</string>
+    <string name="receipt_ph">필리핀\n(PHP)</string>
+    <string name="hint_for_input">입력하세요</string>
+    <string name="hint_msg">수취국 선택 시 표시</string>
+</resources>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.github.hanalee.exchangerateproject.view.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/title"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_remittance_country_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_remittance_country_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/remittance_country"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_receipt_country_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_remittance_country_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_remittance_country_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/explain_america"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_remittance_country_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_remittance_country_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_remittance_country_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_receipt_country_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/receipt_country"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_exchange_rate_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/rg_receipt_country_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_remittance_country_title" />
+
+    <RadioGroup
+        android:id="@+id/rg_receipt_country_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/tv_receipt_country_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_receipt_country_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_receipt_country_title">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_kr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/receipt_kr" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_jp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/receipt_jp" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_ph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/receipt_ph" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_exchange_rate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/exchange_rate"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_view_time_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_exchange_rate_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_receipt_country_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_exchange_rate_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/hint_msg"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_exchange_rate_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_exchange_rate_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_exchange_rate_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_view_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/view_time"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_remittance_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_view_time_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_rate_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_view_time_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_view_time_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_view_time_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_view_time_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_remittance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/remittance"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_rate_result"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/et_remittance"
+        app:layout_constraintTop_toBottomOf="@+id/tv_view_time_title" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_remittance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_for_input"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_remittance_title"
+        app:layout_constraintLeft_toRightOf="@id/tv_remittance_title"
+        app:layout_constraintRight_toLeftOf="@+id/tv_exchange_usd_text"
+        app:layout_constraintTop_toTopOf="@id/tv_remittance_title"
+        tools:text="input" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_exchange_usd_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/exchange_usd"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/et_remittance"
+        app:layout_constraintLeft_toRightOf="@id/et_remittance"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_remittance" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_rate_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_remittance_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>
