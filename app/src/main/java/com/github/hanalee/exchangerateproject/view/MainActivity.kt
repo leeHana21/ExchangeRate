@@ -9,7 +9,7 @@ import com.github.hanalee.exchangerateproject.domain.viewmodel.MainViewModel
 import com.github.hanalee.exchangerateproject.extension.toToast
 import com.jakewharton.rxbinding4.widget.textChanges
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         const val PHP = "PHP"
     }
 
-    private val mainViewModel: MainViewModel by inject()
+    private val mainViewModel: MainViewModel by viewModel()
     private lateinit var binding: ActivityMainBinding
     private lateinit var inputMethodManager: InputMethodManager
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,6 +77,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initObserver() = with(mainViewModel) {
+        apiMsg.observe(this@MainActivity){
+            this@MainActivity.toToast(it)
+        }
         selectedRate.observe(this@MainActivity) {
             binding.tvExchangeRateName.text = it
         }

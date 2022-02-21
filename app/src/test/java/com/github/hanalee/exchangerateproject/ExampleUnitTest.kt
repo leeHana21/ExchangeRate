@@ -1,4 +1,4 @@
-package com.github.hanalee.mvvmkointemplate
+package com.github.hanalee.exchangerateproject
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

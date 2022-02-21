@@ -1,4 +1,4 @@
-package com.github.hanalee.mvvmkointemplate
+package com.github.hanalee.exchangerateproject
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.github.hanalee.mvvmkointemplete", appContext.packageName)
+        assertEquals("com.github.hanalee.exchangerateproject", appContext.packageName)
     }
 }
