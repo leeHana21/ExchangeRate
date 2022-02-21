@@ -39,15 +39,17 @@ class MainViewModel : ViewModel(), KoinComponent {
     val remittance: LiveData<String>
         get() = _remittance
 
+    private val _apiMsg = MutableLiveData<String>()
+    val apiMsg: LiveData<String>
+        get() = _apiMsg
+
     fun getExchangeRate() = viewModelScope.launch(handler) {
         val response = mainRepository.getExchangeRate()
         if (response.success) {
             rateResponse = response.quotes
             convertViewTime(response.timestamp)
         } else {
-            TODO(
-                "오류 처리 필요"
-            )
+            _apiMsg.value = "환율 정보를 정상적으로 불러오지 못했습니다."
         }
     }
 
